@@ -1,0 +1,382 @@
+:root{
+    --bg-purple: #1F1C3D;
+    --light-purple: #ABA9D5;
+    --light-orange: #FBCEA5;
+    --normal-orange: #EF7E09;
+}
+html {scroll-behavior: smooth;}
+*{ font-family: inter; box-sizing: border-box;}
+body{background-color: var(--bg-purple);}
+
+p{ font-size: 1.5rem; font-weight: 400;}
+
+a:hover{
+    opacity: .5;
+}
+ul{padding: 0;}
+
+/*Sección Hero Section*/
+.navbar{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 46px;
+padding: 10vh 0;
+}
+.navbar a{color: var(--light-purple); text-decoration: none; text-align: center; font-size: 1.5rem;}
+.nav-links{ display: flex; flex-direction: row; gap: 24px;}
+#ih-logo{width: 300px; max-height: 72px;}
+
+
+.hero-section{
+    background-color: var(--bg-purple);
+      
+}
+.hero-container{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero-section h1{font-size: 7rem; color: var(--light-purple); text-align: center; max-width: 50%; margin-top: 0; }
+
+/* #img-busqueda{
+    position: absolute;
+    max-width: 50vw;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20%);
+} */
+#img-city, #img-people{
+    width: 100%;
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+}
+#img-sun{width: 90%;}
+#img-city{transform: translateY(-45%);}
+#img-people{transform: translateY(1px);}
+
+/* Sección Que es IH */
+#que-es-IH{
+    background-color: var(--bg-purple);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    color: var(--light-purple);
+    padding: 10vh 5vw;
+}
+
+.encabezado, .info-text{
+    width: 50%;
+    gap: 46px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2vw;
+
+}
+#que-es-IH{overflow: hidden;}
+#que-es-IH h2{ font-size: 3.5rem; font-weight: bold; line-height: 100%; letter-spacing: -2%; margin: 0;}
+#que-es-IH p{font-size: 1.25rem; margin: 0;}
+span.chip{font-size: 1.5rem; width: 100%; padding: 0 2vw 5vh 2vw}
+
+/* Sección Cómo Jugar */
+#como-jugar{min-height: 200px; padding: 5vw; background: linear-gradient(#1F1C3D, #fff);}
+#como-jugar h2{
+    font-size: 3.5rem;
+    text-align: center;
+    color: var(--bg-purple);
+    
+}
+#como-jugar>div{
+    background-color: #ABA9D5;
+    border-radius: 12vw; 
+    position: relative; 
+    min-height: 600px; 
+    padding: 3em;
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1920px;
+}
+.dados{
+    position: absolute;
+    top: 0; right: 0;
+    width: 250px;
+    transform: translateY(-50%) translateX(-50%);
+}
+.row-cards{ display: flex;flex-direction: row; width: 100%;}
+#como-jugar .info-card{ 
+    display: flex;
+    flex-direction: column; 
+    border: 1px solid black; 
+    margin-left: calc(-40% + (100% / 6.65));
+    width: 40%;
+    min-width: 320px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    transition: z-index 0.3s ease-in-out;
+}
+#como-jugar .info-card:first-child {
+    margin-left: 0;
+}
+#como-jugar .info-card:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+.info-card .distinctive-insight {color: var(--light-purple);}
+.info-card .distinctive-reto{color: var(--normal-orange);}
+.conclusion-text{
+    text-align: center;
+    margin: 5vh auto;
+    max-width: 1000px;
+}
+
+#como-jugar .style-1{
+    background-color: var(--light-orange);
+    stroke: 2px solid var(--bg-purple);
+    border-radius: 3rem;
+    padding: 3rem;
+}
+
+#como-jugar .style-1>span{
+    border: 2px solid;
+    border-radius: 2rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+#como-jugar .style-2{
+    background-color: #fff;
+    stroke: 2px solid var(--bg-purple);
+    border-radius: 3rem;
+    padding: 3rem;
+}
+
+.style-2 span{font-weight: bold; font-size: 1.5rem;}
+
+/* Sección Juego / Empieza la partida */
+#juego{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding-bottom: 5vh;
+}
+.indicacion-mobile{display: none;}
+.zona-interactiva{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+    padding: 4rem 0;
+}
+.zona-interactiva-mobile{display: none;}
+
+.mazo{
+    position: relative;
+    width: 320px;
+    aspect-ratio: 250 / 306;
+    height: auto;
+}
+.mazo img{
+    width: 320px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.mazo img.mazo-img{width: 320px; aspect-ratio: 250 / 306;
+    height: auto; position: relative;}
+.card-draggable{
+    z-index: 10;
+}
+#juego h2{
+    font-size: 3.5rem;
+    text-align: center;
+    color: var(--bg-purple);
+    margin: 0 auto;
+}
+.visualizador{
+    width: 320px;
+    min-height: 320px;
+    border: 1px solid;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    justify-content: space-between;
+}
+.visualizador.show{display: flex;}
+
+.visualizador p{font-size: 1.25rem; padding: .5rem 0;}
+.visualizador .chip-card{font-size: 1rem; font-weight: bold; width: 100%;}
+.visualizador .distinctive-insight{color: var(--light-purple);}
+.visualizador .distinctive-reto{color: var(--normal-orange);}
+#ic_card_ih{width: 48px;}
+.card-draggable:hover{cursor: grab;}
+
+/*Footer*/
+footer{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5vh 0;
+    border-top: 2px solid var(--bg-purple);
+    background-color: white;}
+.footer-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+}
+.footer-links li{text-decoration: none;}
+.footer-links img{height: 50px;}
+footer p{font-size: 16px;}
+#creative-commons{max-width: 200px;height: 50px; margin: 1rem;;}
+
+.timer {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: var(--light-purple);
+  padding: .5rem .25rem;
+  border-radius: .25rem;
+  color: var(--bg-purple);
+  z-index: 100;
+  min-width: 72px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.timer.warning {
+  background-color: #6c2d2d;
+  color: white;
+}
+
+.timer.finished {
+  background-color: black;
+  color: white;
+}
+
+@media screen and (max-width: 1160px){
+    p { font-size: 1.25rem; }
+    .hero-section { padding: 2vh 0;}
+    .navbar{padding: 5vh 0; gap: unset;}
+    .navbar a{font-size: 1.25rem;}
+    
+    .hero-container{bottom: 0; margin: 0;}
+    .hero-container h1{font-size: 4rem; max-width: unset;}
+    #img-busqueda{max-width: 70%; top: -25%;}
+
+    #que-es-IH{flex-direction: column; padding: 5vh 5vw;}
+    #que-es-IH h2{font-size: 2.5rem;}
+    span.chip{padding: 0;}
+    .encabezado, .info-text{width: unset; padding: 2vh 0;}
+
+    .dados{width: 160px; top: 0; left: 0; transform: translate(75%, -50%);}
+    .row-cards{flex-direction: column;}
+    #como-jugar .info-card{margin-left: unset; margin-top: -100px; width: 100%;}
+    #como-jugar .info-card:first-child{margin-top: 0;}
+    #como-jugar h2{padding-bottom: 4rem; font-size: 2.5rem;}
+    .conclusion-text{line-height: 150%; text-align: center; margin: 2rem auto; width: 80%;}
+
+    #juego{padding:5vh 5vw;}
+    .indicacion-mobile{display: block;}
+    .indicacion-desktop{display: none;}
+    .zona-interactiva-mobile{display: flex; width: 100%; flex-direction: column; align-items: center; gap: 5vw;}
+    .cards-container-mobile{width: 100%; display: flex; justify-content: center; gap: 5vw;}
+    .visualizador{position: inherit;}
+    .mazo{max-width: 50%;}
+    .mazo img{max-width: 100%;}
+    .mazo img.mazo-img{max-width: 100%;}
+    #juego h2{margin: 1.5rem 0; font-size: 2.5rem;}
+    #juego p{padding: 0 5vw; text-align: center;}
+    
+
+    .zona-interactiva{display: none;}
+
+    .footer-links{flex-direction: column; align-items: center; gap: 5vw;}
+    .footer-links img{height: unset; height: 48px; margin: 1rem 0;}
+
+  }
+  @media screen and (max-width: 720px){
+    .nav-links{flex-direction: column; gap: 1rem;}
+    .hero-container h1{font-size: 3.5rem; max-width: 85%;}
+    #como-jugar > div{padding: 2rem .5rem;}
+    #como-jugar .info-card{min-width: unset;}
+  }
+
+  @media screen and (min-width: 1900px){
+    p{ font-size: 28px; font-weight: 400;}
+    #ih-logo{max-height: 150px;}
+    #que-es-IH{padding:10vh 10vw ;}
+    #que-es-IH h2{font-size: 67px;}
+    #que-es-IH p{font-size: 1.75rem;}
+    .navbar a{font-size: 28px;}
+    #como-jugar {display: flex; flex-direction: column; align-items: center;}
+    #como-jugar > div{border-radius: 10rem; min-height: 800px;}
+    .conclusion-text{max-width: 1400px;}
+  }
+
+  @media screen and (min-width: 2560px){
+        :root {font-size: 24px;}
+      }
+  
+ 
+@media (max-width: 900px) {
+  .card-draggable {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+}
+
+ /*Animación revelación progresiva*/
+ .progr-disc {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translatex(-100%);
+    transition: all 1s;
+}
+
+.progr-disc.disc-right{ transform: translatex(100%);}
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0) !important;
+    display: block;
+}
+
+.delay1{transition-delay: 200ms;}
+.delay2{transition-delay: 400ms;}
+.delay3{transition-delay: 600ms;}
+.delay4{transition-delay: 800ms;}
+
+.visualizador.drag-over {
+  background-color: rgba(0, 150, 255, 0.1);
+  border: 2px dashed #0095ff;
+}
+
+.card-draggable.dragging {
+  opacity: 0.7;
+}
